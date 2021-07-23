@@ -1,0 +1,71 @@
+
+======== SPEECH RECOGNITION USING SPHINX DEPENDENCIES ================
+
+There are two packages used in my project.
+1. com.voicerecog.test
+2. demo
+
+The first package 'com.voicerecog.test' contains two major files.
+i) The Interface file named (ProjectInter.java)
+ii) The main project file that contains most of the code (VoiceRecognizer.java)
+
+The second package 'demo' contains the superclass 'classNames' which is further inherited by the classes present in the first package.
+
+NOTE: 
+
+I have used the sphinx JAR files with dependencies for this project. These are included in the Referenced Libraries as
+i) sphinx4-core 
+ii) sphinx4-data
+
+---------Overview about Sphinx4:---------
+
+Sphinx4 is a pure Java speech recognition library. It provides a quick and easy API to convert the speech recordings into text with the help of CMUSphinx acoustic models.
+I used sphinx4 by adding the jars to the dependencies of my project in following steps.
+
+Step1: Hover mouse button over the project file name, which in my case is 'voiceRecogniser', in the eclipse workspace (left side where all the projects and packages name are there)
+	   and right click on it.
+	   
+Step 2: Select Build Path option and the select Configure Build Path.
+
+Step 3: Now select Classpath from libraries.
+
+Step 4: Select the 'Add External JARS' option on the right hand side.
+
+Step 5: Select the downloaded Sphinx4 JAR files from local system and add it to your project.
+
+And now our Sphinx$ libraries are added to our project.
+
+-------------------------------------------------
+
+Few of the sphinx classes that are used are Configuration class, LiveSpeechRecognizer class, speechResult class. 
+All these classes are from the package named 'edu.cmu.sphinx.api.Configuration' which comes in when Sphinx4 libraries are added.
+
+i) Configuration class: This gives the common configuration options. And it has certain inbuilt methods like setAcousticModelPath(), setDictionaryPath(), setLanguageModelPath().
+ii) LiveSpeechRecognizer class: High-level class for live speech recognition. And it has certain inbuilt methods like startRecognition(), stopRecognition().
+iii) speechResult class: High-level wrapper for Result instance. And it has certain inbuilt methods like getResult().
+
+
+--------------------------------------------------
+
+CORPUS FILE
+
+The corpus file is simple text file that contains the commands that must be spoken and only those commands inside the corpus file get executed.
+In my case, my corpus file contains two basic commands OPEN CHROME, and CLOSE CHROME, so only these two commands can be executed or the computer will recognise only these two commands
+when spoken.
+
+How corpus file works?
+
+We make use of something called  Sphinx Knowledge Base Tool -- VERSION 3. This tool is present in the google. This  Sphinx Knowledge Base Tool -- VERSION 3 builds a consistent
+set of lexical and language modeling files for Sphinx (and compatible) decoders. In simpler words, this tools converts the commands entered in the corpus file into a language which
+will match to the words spoken by us. So when we actually say "OPEN CHROME" the computer recognises the words spoken by us and matches it with the converted language. If they match
+then a new tab in Chrome is opened without us even touching the system.
+
+
+Respected Sir, 
+
+I have pushed the entire Project onto my github profile. Please do check. Thank You;
+
+================================================================================================================================================================================
+
+
+	   
